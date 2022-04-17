@@ -303,7 +303,6 @@ svg {
 }
 
 .doing-item {
-  /* position: relative; */
   flex-basis: calc(100% - 90px / 3);
 }
 
@@ -529,6 +528,11 @@ svg {
   background: rgba(0, 0, 0, 0.2);
 }
 
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .modal {
   position: absolute;
   top: 50%;
@@ -538,6 +542,29 @@ svg {
   height: 521px;
   width: 528px;
   background-color: var(--background-color);
+}
+
+.btn-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  background-color: var(--background-color);
+
+  padding: 0;
+}
+
+.close {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
 }
 
 /* PORTFOLIO */
